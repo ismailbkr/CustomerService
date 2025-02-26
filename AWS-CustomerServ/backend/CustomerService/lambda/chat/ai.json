@@ -1,0 +1,225 @@
+{
+    "qa_pairs": [
+        {
+            "category": "Sipariş",
+            "question": "Nasıl sipariş verebilirim?",
+            "variations": [
+                "sipariş vermek istiyorum",
+                "nasıl alabilirim",
+                "satın almak istiyorum",
+                "sipariş oluşturmak istiyorum",
+                "alışveriş yapmak istiyorum",
+                "nereden alabilirim",
+                "sipariş süreci nasıl",
+                "nasıl satın alabilirim",
+                "online sipariş",
+                "siparişi nasıl oluşturabilirim"
+            ],
+            "answer": "Siparişinizi şu kanallardan verebilirsiniz:\n- Web sitemiz üzerinden\n- Mobil uygulamamızdan\n- Müşteri hizmetlerimizi (0800 123 45 67) arayarak\n- Mağazalarımızı ziyaret ederek\nOnline sipariş için üyelik oluşturmanız gerekmektedir."
+        },
+        {
+            "category": "Sipariş Takibi",
+            "question": "Siparişim nerede?",
+            "variations": [
+                "sipariş takibi yapmak istiyorum",
+                "siparişimi takip etmek istiyorum",
+                "kargom nerede",
+                "sipariş durumu",
+                "siparişim ne durumda",
+                "kargo takibi",
+                "teslimat durumu",
+                "ne zaman gelecek siparişim",
+                "siparişim teslim edildi mi",
+                "sipariş durumunu öğrenmek istiyorum"
+            ],
+            "answer": "Sipariş numaranızı paylaşırsanız, anlık durumunu kontrol edebilirim. Ayrıca web sitemizden 'Sipariş Takibi' bölümünden kendiniz de takip edebilirsiniz."
+        },
+        {
+            "category": "Kargo",
+            "question": "Kargo ücreti ne kadar?",
+            "variations": [
+                "kargo bedava mı",
+                "kargo ücretli mi",
+                "kargoyu kim ödüyor",
+                "kargo fiyatı",
+                "kargo masrafı",
+                "teslimat ücreti",
+                "gönderim ücreti",
+                "kargo parası",
+                "kargo ne kadar tutar",
+                "kargo ücretsiz mi"
+            ],
+            "answer": "500 TL ve üzeri alışverişlerde kargo ücretsizdir. 500 TL altı siparişlerde kargo ücreti 49.90 TL'dir."
+        },
+        {
+            "category": "Teslimat",
+            "question": "Ne zaman elime ulaşır?",
+            "variations": [
+                "teslimat ne zaman",
+                "ne zaman gelir",
+                "teslim süresi",
+                "kaç günde gelir",
+                "ne kadar sürede gelir",
+                "teslimat süresi",
+                "kargo süresi",
+                "ne zaman teslim edilir",
+                "teslimat tarihi",
+                "ne zaman alabilirim"
+            ],
+            "answer": "Siparişlerimiz ortalama 2-3 iş günü içinde teslim edilmektedir. İstanbul içi siparişlerde aynı gün teslimat seçeneğimiz mevcuttur."
+        },
+        {
+            "category": "İade",
+            "question": "İade koşullarınız nelerdir?",
+            "variations": [
+                "nasıl iade edebilirim",
+                "iade etmek istiyorum",
+                "ürünü iade etmek istiyorum",
+                "iade süreci nasıl",
+                "iade prosedürü",
+                "iade şartları",
+                "geri iade",
+                "para iadesi",
+                "ürün iadesi nasıl yapılıyor",
+                "iade kabul ediyor musunuz"
+            ],
+            "answer": "Tüm ürünlerimizde 14 gün içinde iade garantisi sunuyoruz. Ürünün kullanılmamış, hasarsız ve orijinal ambalajında olması gerekmektedir. İade kargo ücreti firmamıza aittir."
+        },
+        {
+            "category": "Garanti",
+            "question": "Garanti şartları nelerdir?",
+            "variations": [
+                "garantisi var mı",
+                "garanti kapsamı",
+                "garanti süresi ne kadar",
+                "kaç yıl garantili",
+                "garanti belgesi",
+                "garanti süreci",
+                "garanti koşulları",
+                "garantisi ne kadar",
+                "garanti geçerlilik süresi",
+                "garanti kapsamında mı"
+            ],
+            "answer": "Tüm ürünlerimiz 2 yıl resmi garanti kapsamındadır. Ek olarak +1 yıl mağaza garantisi sunuyoruz. Garanti kapsamında değişim ve onarım hizmetleri ücretsizdir."
+        },
+        {
+            "category": "Teknik Destek",
+            "question": "Teknik destek alabilir miyim?",
+            "variations": [
+                "teknik sorun yaşıyorum",
+                "arıza var",
+                "ürün çalışmıyor",
+                "destek istiyorum",
+                "yardım almak istiyorum",
+                "sorun yaşıyorum",
+                "teknik yardım",
+                "servis desteği",
+                "ürünümde problem var",
+                "teknik servise ihtiyacım var"
+            ],
+            "answer": "Teknik destek ekibimiz 7/24 hizmetinizdedir. Bize şu kanallardan ulaşabilirsiniz:\n- Telefon: 0800 123 45 67\n- E-posta: destek@sirket.com\n- Canlı Destek: Web sitemiz üzerinden"
+        },
+        {
+            "category": "İletişim",
+            "question": "Size nasıl ulaşabilirim?",
+            "variations": [
+                "iletişim bilgileri",
+                "telefon numaranız",
+                "mail adresiniz",
+                "adresiniz nedir",
+                "iletişim numarası",
+                "müşteri hizmetleri",
+                "çağrı merkezi",
+                "iletişime geçmek istiyorum",
+                "sizinle nasıl görüşebilirim",
+                "telefon numaranızı alabilir miyim"
+            ],
+            "answer": "Bize şu kanallardan ulaşabilirsiniz:\n- Müşteri Hizmetleri: 0800 123 45 67\n- E-posta: destek@sirket.com\n- WhatsApp: 0500 123 45 67\n- Sosyal Medya: @sirket"
+        },
+        {
+            "category": "Çalışma Saatleri",
+            "question": "Çalışma saatleriniz nedir?",
+            "variations": [
+                "saat kaçta açılıyorsunuz",
+                "saat kaçta kapanıyorsunuz",
+                "mesai saatleri",
+                "açılış kapanış saati",
+                "hangi saatler arasında açıksınız",
+                "çalışma süreleri",
+                "hizmet saatleri",
+                "ne zaman açıksınız",
+                "çalışma zamanlarınız",
+                "mesai saatleriniz nedir"
+            ],
+            "answer": "- Çağrı Merkezi: 7/24 hizmet\n- Mağazalar: 10:00-22:00\n- Online Destek: Hafta içi 09:00-18:00\n- Teknik Servis: Hafta içi 09:00-18:00"
+        },
+        {
+            "category": "Kampanyalar",
+            "question": "Kampanyalarınız neler?",
+            "variations": [
+                "indirim var mı",
+                "aktif kampanyalar",
+                "güncel kampanyalar",
+                "fırsat var mı",
+                "promosyon var mı",
+                "özel teklif",
+                "indirimli ürünler",
+                "kampanya duyuruları",
+                "ne gibi kampanyalar var",
+                "şu an kampanya var mı"
+            ],
+            "answer": "Güncel kampanyalarımız:\n- Yeni üyelere özel %10 indirim\n- Seçili ürünlerde 2. ürüne %50 indirim\n- 500 TL üzeri alışverişlerde 100 TL indirim\n- Öğrencilere ekstra %5 indirim"
+        },
+        {
+            "category": "Ödeme",
+            "question": "Ödeme seçenekleri nelerdir?",
+            "variations": [
+                "nasıl ödeme yapabilirim",
+                "ödeme yöntemleri",
+                "hangi ödeme yöntemleri var",
+                "kredi kartı geçiyor mu",
+                "nakit ödeme",
+                "online ödeme",
+                "eft havale",
+                "kapıda ödeme var mı",
+                "ödeme alternatifleri",
+                "ödeme şekilleri"
+            ],
+            "answer": "Kabul ettiğimiz ödeme yöntemleri:\n- Kredi/Banka Kartı\n- Havale/EFT\n- Kapıda Ödeme\n- Alışveriş Kredisi\n- PayPal\n- Mobil Ödeme"
+        },
+        {
+            "category": "Veda",
+            "question": "Teşekkür ederim",
+            "variations": [
+                "teşekkürler",
+                "sağ olun",
+                "çok teşekkürler",
+                "teşekkür ederiz",
+                "yardımınız için teşekkürler",
+                "thanks",
+                "tşk",
+                "teşekkür ettim",
+                "sağolun",
+                "yardımınız için sağolun"
+            ],
+            "answer": "Rica ederim! Başka bir konuda yardımcı olabilirim mi?"
+        },
+        {
+            "category": "Veda",
+            "question": "Görüşürüz",
+            "variations": [
+                "hoşça kalın",
+                "iyi günler",
+                "bay bay",
+                "güle güle",
+                "bye",
+                "iyi akşamlar",
+                "görüşmek üzere",
+                "kendine iyi bak",
+                "allaha emanet ol",
+                "bye bye"
+            ],
+            "answer": "İyi günler! Tekrar görüşmek üzere. Herhangi bir sorunuz olursa bize ulaşmaktan çekinmeyin."
+        }
+    ]
+}

@@ -4,13 +4,16 @@ import { useState } from 'react';
 import Modal from '@/components/Modal';
 import { LoginForm, RegisterForm } from '@/components/AuthForms';
 import { ChatBubbleLeftRightIcon, LightBulbIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 
 export default function Home() {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
   const [user, setUser] = useState<{ email: string } | null>(null);
 
-  const handleAuthSuccess = (email: string) => {
+  const handleAuthSuccess = (email: string, token: string) => {
+    localStorage.setItem('token', token);
+    localStorage.setItem('userEmail', email);
     setUser({ email });
     setIsLoginOpen(false);
     setIsRegisterOpen(false);
@@ -140,6 +143,18 @@ export default function Home() {
             </dl>
           </div>
         </div>
+
+        {user && (
+          <div className="fixed bottom-8 right-8">
+            <Link
+              href="/chat"
+              className="flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-500 transition-all shadow-lg hover:shadow-xl"
+            >
+              <ChatBubbleLeftRightIcon className="h-6 w-6" />
+              Müşteri Hizmetleri
+            </Link>
+          </div>
+        )}
       </main>
 
       {/* Login Modal */}
