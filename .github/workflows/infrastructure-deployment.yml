@@ -1,0 +1,40 @@
+name: Infrastructure Deployment
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'AWS-CustomerServ/infrastructure/**'
+  workflow_dispatch:  # Manuel tetikleme için
+
+jobs:
+  deploy-infrastructure:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      
+      - name: Deploy CloudFormation stack
+        run: |
+          # CloudFormation stack dağıtımı
+          echo "CloudFormation stack dağıtılıyor..."
+          aws cloudformation deploy \
+            --template-file AWS-CustomerServ/infrastructure/template.yml \
+            --stack-name customer-service-stack \
+            --parameter-overrides Environment=prod \
+            --capabilities CAPABILITY_IAM
+          
+          # Stack çıktılarını alma
+          echo "Stack çıktıları alınıyor..."
+          aws cloudformation describe-stacks \
+            --stack-name customer-service-stack \
+            --query "Stacks[0].Outputs" \
+            --output table 

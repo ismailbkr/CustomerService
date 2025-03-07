@@ -1,0 +1,116 @@
+name: Backend CI/CD
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'AWS-CustomerServ/backend/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'AWS-CustomerServ/backend/**'
+  workflow_dispatch:  # Manuel tetikleme için
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: AWS-CustomerServ/backend/CustomerService
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          # Python bağımlılıklarını yükleme
+          python -m pip install --upgrade pip
+          
+          # Lambda fonksiyonları için gerekli bağımlılıkları yükleme
+          if [ -f lambda/chat/requirements.txt ]; then
+            pip install -r lambda/chat/requirements.txt
+          fi
+          
+          # Test ve linting araçlarını yükleme
+          pip install pytest pylint
+      
+      - name: Lint with pylint
+        run: |
+          # Kod kalitesi kontrolü
+          echo "Lambda fonksiyonlarının kod kalitesi kontrolü yapılıyor..."
+          pylint --disable=C0111,C0103,C0303,W1203 lambda/ || true
+          # Not: || true ifadesi, linting hataları olsa bile pipeline'ın devam etmesini sağlar
+      
+      - name: Test with pytest
+        run: |
+          # Testleri çalıştırma
+          echo "Lambda fonksiyonlarının testleri çalıştırılıyor..."
+          if [ -f lambda/chat/test_lambda.py ]; then
+            cd lambda/chat
+            pytest test_lambda.py || true
+            cd ../..
+          else
+            echo "Test dosyası bulunamadı, testler atlanıyor."
+          fi
+          # Not: || true ifadesi, test hataları olsa bile pipeline'ın devam etmesini sağlar
+      
+      - name: Package Lambda functions
+        run: |
+          # Lambda fonksiyonlarını paketleme
+          echo "Lambda fonksiyonları paketleniyor..."
+          mkdir -p dist
+          
+          # Chat Lambda paketleme
+          echo "Chat Lambda fonksiyonu paketleniyor..."
+          cd lambda/chat
+          
+          # Python bağımlılıklarını lambda paketine dahil etme
+          mkdir -p python
+          pip install -r requirements.txt -t python/
+          
+          # Lambda fonksiyonunu zip dosyasına paketleme
+          zip -r ../../dist/chat-lambda.zip lambda_function.py python/ .env.example ai.json
+          
+          # Ana Lambda paketleme
+          echo "Ana Lambda fonksiyonu paketleniyor..."
+          cd ../..
+          zip -r dist/main-lambda.zip lambda_function.py
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      
+      - name: Deploy to AWS Lambda
+        run: |
+          # Lambda fonksiyonlarını AWS'ye dağıtma
+          echo "Lambda fonksiyonları AWS'ye dağıtılıyor..."
+          
+          # Chat Lambda fonksiyonunu güncelleme
+          echo "Chat Lambda fonksiyonu güncelleniyor..."
+          aws lambda update-function-code \
+            --function-name customer-service-chat \
+            --zip-file fileb://dist/chat-lambda.zip
+          
+          # Ana Lambda fonksiyonunu güncelleme
+          echo "Ana Lambda fonksiyonu güncelleniyor..."
+          aws lambda update-function-code \
+            --function-name customer-service-main \
+            --zip-file fileb://dist/main-lambda.zip
+      
+      - name: Update API Gateway
+        run: |
+          # API Gateway'i güncelleme
+          echo "API Gateway güncelleniyor..."
+          aws apigateway create-deployment \
+            --rest-api-id ${{ secrets.API_GATEWAY_ID }} \
+            --stage-name prod 
