@@ -1,5 +1,8 @@
 # Customer Service AI Assistant - .gitignore
 
+# Screenshots folder (local only)
+screenshots/
+
 # Dependencies
 node_modules/
 **/node_modules/

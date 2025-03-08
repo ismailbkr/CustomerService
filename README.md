@@ -1,93 +1,83 @@
-# Customer Service AI Assistant
+# 🤖 Customer Service AI Assistant
 
-Bu proje, yapay zeka destekli bir müşteri hizmetleri asistanı uygulamasıdır. Kullanıcıların sorularını yanıtlamak ve müşteri hizmetleri süreçlerini otomatikleştirmek için tasarlanmıştır.
+<div align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/AWS_Lambda-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS Lambda" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+</div>
 
-## Proje Yapısı
+<br>
 
-Proje iki ana bölümden oluşmaktadır:
+## 📋 Proje Hakkında
 
-- **Frontend**: Next.js ile geliştirilmiş modern bir web arayüzü
-- **Backend**: AWS Lambda ve API Gateway kullanılarak oluşturulmuş serverless bir mimari
+Bu proje, yapay zeka destekli bir müşteri hizmetleri asistanı uygulamasıdır. Modern web teknolojileri ve AWS serverless mimarisi kullanılarak geliştirilmiştir. Kullanıcıların sorularını gerçek zamanlı olarak yanıtlayarak müşteri hizmetleri süreçlerini otomatikleştirir.
 
-## Teknolojiler
+### 🌟 Öne Çıkan Özellikler
+
+- ⚡ **Gerçek Zamanlı Sohbet**: Anında yanıt veren interaktif sohbet arayüzü
+- 🧠 **Yapay Zeka Desteği**: Gelişmiş AI modelleri ile doğal dil işleme
+- 🔐 **Güvenli Kimlik Doğrulama**: Kullanıcı hesapları ve oturum yönetimi
+- 📊 **Sohbet Geçmişi**: Önceki konuşmaları görüntüleme ve devam ettirme
+
+## 🏗️ Mimari
+
+Proje iki ana bileşenden oluşmaktadır:
 
 ### Frontend
-- Next.js
-- TypeScript
-- Tailwind CSS
-- React
+- **Next.js**: React tabanlı modern web framework
+- **TypeScript**: Tip güvenliği sağlayan JavaScript süper kümesi
+- **Tailwind CSS**: Hızlı UI geliştirme için utility-first CSS framework
+- **React**: Kullanıcı arayüzü için komponent tabanlı JavaScript kütüphanesi
 
 ### Backend
-- AWS Lambda
-- API Gateway
-- S3
-- Node.js
+- **AWS Lambda**: Serverless fonksiyon çalıştırma ortamı
+- **API Gateway**: RESTful API endpoint yönetimi
+- **S3**: Dosya depolama ve statik içerik sunumu
+- **Node.js**: Sunucu tarafı JavaScript runtime
 
-## Kurulum
+## 🖼️ Ekran Görüntüleri
 
-### Ön Gereksinimler
-- Node.js (v18 veya üzeri)
-- npm veya yarn
-- AWS hesabı (backend deployment için)
+<div align="center">
+  <img src="./screenshots/homepage.png" alt="Ana Sayfa" width="800"/>
+  <p><i>Ana Sayfa - Müşteri Hizmetlerinde Yapay Zeka Devrimi</i></p>
+</div>
 
-### Frontend Kurulumu
-1. Frontend dizinine gidin:
-```bash
-cd AWS-CustomerServ/frontend
-```
+## 🚀 Demo
 
-2. Bağımlılıkları yükleyin:
-```bash
-npm install
-# veya
-yarn install
-```
+Şu anda projenin canlı demosu bulunmamaktadır. Proje geliştirme aşamasındadır ve yakında demo sürümü yayınlanacaktır.
 
-3. Örnek çevre değişkenleri dosyasını kopyalayın:
-```bash
-cp .env.example .env.local
-```
+## 📝 Kullanım
 
-4. `.env.local` dosyasını gerçek API Gateway URL'iniz ile güncelleyin.
+1. Ana sayfada kullanıcı girişi yapın veya yeni hesap oluşturun
+2. Sohbet arayüzünde müşteri hizmetleri asistanına sorunuzu yazın
+3. Gerçek zamanlı yanıtları alın ve konuşmaya devam edin
+4. Geçmiş sohbetlerinize istediğiniz zaman erişebilirsiniz
 
-5. Geliştirme sunucusunu başlatın:
-```bash
-npm run dev
-# veya
-yarn dev
-```
+## 👨‍💻 Geliştirici Bilgileri
 
-### Backend Kurulumu
-1. Backend Lambda dizinine gidin:
-```bash
-cd AWS-CustomerServ/backend/CustomerService/lambda/chat
-```
+Bu proje, AWS serverless mimarisi ve modern web teknolojileri konusunda deneyim kazanmak amacıyla geliştirilmiştir. Projenin amacı, müşteri hizmetleri süreçlerini otomatikleştirerek hem kullanıcı deneyimini iyileştirmek hem de işletmelere maliyet avantajı sağlamaktır.
 
-2. Örnek çevre değişkenleri dosyasını kopyalayın:
-```bash
-cp .env.example .env
-```
+## 🔒 Güvenlik Notları
 
-3. `.env` dosyasını gerçek AWS yapılandırmalarınızla güncelleyin.
+- `.env` dosyaları repository'ye dahil edilmemiştir
+- Hassas bilgiler için `.env.example` dosyaları şablon olarak kullanılmıştır
+- AWS kaynaklarına erişim için IAM rol tabanlı yetkilendirme kullanılmıştır
+- Kullanıcı kimlik bilgileri güvenli bir şekilde saklanmaktadır
 
-## Özellikler
-
-- Gerçek zamanlı sohbet arayüzü
-- Yapay zeka destekli yanıtlar
-- Kullanıcı kimlik doğrulama
-- Sohbet geçmişi
-
-## Güvenlik Notları
-
-- `.env` dosyalarını asla repository'ye commit etmeyin
-- Her zaman `.env.example` dosyalarını şablon olarak kullanın
-- AWS kimlik bilgilerinizi ve hassas bilgilerinizi güvende tutun
-- Lambda fonksiyonları için sabit kodlanmış kimlik bilgileri yerine AWS IAM rollerini ve politikalarını kullanın
-
-## Lisans
+## 📄 Lisans
 
 Bu proje [MIT lisansı](LICENSE) altında lisanslanmıştır.
 
-## İletişim
+## 📞 İletişim
 
-Sorularınız veya geri bildirimleriniz için lütfen iletişime geçin. 
+Proje hakkında sorularınız veya geri bildirimleriniz için:
+
+- GitHub: [github.com/ismailbkr](https://github.com/ismailbkr)
+
+---
+
+<div align="center">
+  <p>⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın! ⭐</p>
+</div> 
