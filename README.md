@@ -40,7 +40,7 @@ Proje iki ana bileşenden oluşmaktadır:
 ## 🖼️ Ekran Görüntüleri
 
 <div align="center">
-  <img src="./screenshots/homepage.png" alt="Ana Sayfa" width="800"/>
+  <img src="screenshots/homepage.png" alt="Ana Sayfa" width="800"/>
   <p><i>Ana Sayfa - Müşteri Hizmetlerinde Yapay Zeka Devrimi</i></p>
 </div>
 
@@ -58,6 +58,30 @@ Proje iki ana bileşenden oluşmaktadır:
 ## 👨‍💻 Geliştirici Bilgileri
 
 Bu proje, AWS serverless mimarisi ve modern web teknolojileri konusunda deneyim kazanmak amacıyla geliştirilmiştir. Projenin amacı, müşteri hizmetleri süreçlerini otomatikleştirerek hem kullanıcı deneyimini iyileştirmek hem de işletmelere maliyet avantajı sağlamaktır.
+
+## 🔄 CI/CD Pipeline
+
+Projemiz, sürekli entegrasyon ve sürekli dağıtım (CI/CD) prensiplerini takip etmektedir. Bu, kod kalitesini artırmak ve dağıtım sürecini otomatikleştirmek için tasarlanmıştır.
+
+### 🔧 CI Pipeline
+
+- **GitHub Actions**: Her pull request ve main branch'e push işleminde otomatik olarak çalışır
+- **Linting**: ESLint ve Prettier ile kod kalitesi ve stil kontrolü
+- **Unit Testler**: Jest ile otomatik birim testleri
+- **Integration Testler**: End-to-end testler için Cypress kullanımı
+
+### 📦 CD Pipeline
+
+- **Otomatik Deployment**: Main branch'e merge edilen değişiklikler otomatik olarak staging ortamına deploy edilir
+- **AWS Deployment**: AWS CDK kullanılarak AWS kaynaklarının otomatik oluşturulması ve güncellenmesi
+- **Frontend Deployment**: Vercel platformu üzerinden otomatik frontend deployment
+- **Backend Deployment**: AWS Lambda ve API Gateway için otomatik deployment
+
+### 🔍 Kalite Kontrol
+
+- **Code Review**: Tüm pull request'ler en az bir onay gerektirir
+- **Test Coverage**: %80 ve üzeri test coverage hedefi
+- **Security Scanning**: Güvenlik açıklarını tespit etmek için otomatik tarama
 
 ## 🔒 Güvenlik Notları
 
