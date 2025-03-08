@@ -2,6 +2,7 @@
 
 # Dependencies
 node_modules/
+**/node_modules/
 .pnp/
 .pnp.js
 
@@ -13,6 +14,7 @@ dist/
 *.zip
 lambda_function.zip
 lambda_layer.zip
+python.zip
 
 # Environment variables and secrets
 .env
@@ -35,6 +37,7 @@ coverage/
 
 # Python
 __pycache__/
+**/__pycache__/
 *.py[cod]
 *$py.class
 *.so
@@ -42,6 +45,21 @@ __pycache__/
 venv/
 ENV/
 .pytest_cache/
+
+# Python packages and dependencies
+**/python/
+**/layers/python/
+**/lambda/chat/python/
+**/boto3/
+**/botocore/
+**/urllib3/
+**/dateutil/
+**/s3transfer/
+**/jmespath/
+**/dotenv/
+**/*.dist-info/
+**/bin/
+**/lib/
 
 # IDE
 .idea/
