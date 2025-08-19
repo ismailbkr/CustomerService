@@ -44,9 +44,6 @@ Proje iki ana bileşenden oluşmaktadır:
   <p><i>Ana Sayfa - Müşteri Hizmetlerinde Yapay Zeka Devrimi</i></p>
 </div>
 
-## 🚀 Demo
-
-Şu anda projenin canlı demosu bulunmamaktadır. Proje geliştirme aşamasındadır ve yakında demo sürümü yayınlanacaktır.
 
 ## 📝 Kullanım
 
@@ -90,18 +87,5 @@ Projemiz, sürekli entegrasyon ve sürekli dağıtım (CI/CD) prensiplerini taki
 - AWS kaynaklarına erişim için IAM rol tabanlı yetkilendirme kullanılmıştır
 - Kullanıcı kimlik bilgileri güvenli bir şekilde saklanmaktadır
 
-## 📄 Lisans
 
-Bu proje [MIT lisansı](LICENSE) altında lisanslanmıştır.
 
-## 📞 İletişim
-
-Proje hakkında sorularınız veya geri bildirimleriniz için:
-
-- GitHub: [github.com/ismailbkr](https://github.com/ismailbkr)
-
----
-
-<div align="center">
-  <p>⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın! ⭐</p>
-</div> 
